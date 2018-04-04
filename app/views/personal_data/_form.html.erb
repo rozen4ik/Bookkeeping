@@ -1,0 +1,32 @@
+<%= form_with(model: personal_datum, local: true) do |form| %>
+  <% if personal_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(personal_datum.errors.count, "error") %> prohibited this personal_datum from being saved:</h2>
+
+      <ul>
+      <% personal_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender, id: :personal_datum_gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.number_field :phone, id: :personal_datum_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :marital_statusID %>
+    <%= form.number_field :marital_statusID, id: :personal_datum_marital_statusID %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,32 @@
+<%= form_with(model: operating_schedule, local: true) do |form| %>
+  <% if operating_schedule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(operating_schedule.errors.count, "error") %> prohibited this operating_schedule from being saved:</h2>
+
+      <ul>
+      <% operating_schedule.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :monthID %>
+    <%= form.number_field :monthID, id: :operating_schedule_monthID %>
+  </div>
+
+  <div class="field">
+    <%= form.label :col_days %>
+    <%= form.number_field :col_days, id: :operating_schedule_col_days %>
+  </div>
+
+  <div class="field">
+    <%= form.label :staffID %>
+    <%= form.number_field :staffID, id: :operating_schedule_staffID %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

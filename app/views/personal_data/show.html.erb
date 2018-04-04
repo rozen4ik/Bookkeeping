@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @personal_datum.gender %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @personal_datum.phone %>
+</p>
+
+<p>
+  <strong>Marital statusid:</strong>
+  <%= @personal_datum.marital_statusID %>
+</p>
+
+<%= link_to 'Edit', edit_personal_datum_path(@personal_datum) %> |
+<%= link_to 'Back', personal_data_path %>

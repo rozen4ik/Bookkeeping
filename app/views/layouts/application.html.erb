@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BookKeeping</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= link_to 'Welcome', root_path %>
+    <%= link_to 'Month', months_path %>
+    <%= link_to 'Post', posts_path %>
+    <%= link_to 'Staff', staffs_path %>
+    <%= link_to 'Contract', contracts_path %>
+    <%= link_to 'Method Payment', method_payments_path %>
+    <%= link_to 'Marital Status', marital_statuses_path %>
+    <%= link_to 'Personal Data', personal_data_path %>
+    <%= link_to 'Operating Schedule', operating_schedules_path%>
+    <%= yield %>
+  </body>
+</html>

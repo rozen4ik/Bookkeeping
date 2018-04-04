@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  monthID: 1
+  col_days: 1
+  staffID: 1
+
+two:
+  monthID: 1
+  col_days: 1
+  staffID: 1

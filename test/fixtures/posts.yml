@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  posts: MyString
+  method_paymentID: 1
+  zp: MyString
+
+two:
+  posts: MyString
+  method_paymentID: 1
+  zp: MyString
