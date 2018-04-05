@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Monthid:</strong>
+  <strong>Месяц id:</strong>
   <%= @operating_schedule.monthID %>
 </p>
 
 <p>
-  <strong>Col days:</strong>
+  <strong>Количество дней:</strong>
   <%= @operating_schedule.col_days %>
 </p>
 
 <p>
-  <strong>Staffid:</strong>
+  <strong>Сотрудник id:</strong>
   <%= @operating_schedule.staffID %>
 </p>
 
-<%= link_to 'Edit', edit_operating_schedule_path(@operating_schedule) %> |
-<%= link_to 'Back', operating_schedules_path %>
+<%= link_to 'Редактировать', edit_operating_schedule_path(@operating_schedule), class: 'btn btn-dark' %>
+<%= link_to 'Назад', operating_schedules_path, class: 'btn btn-outline-dark' %>

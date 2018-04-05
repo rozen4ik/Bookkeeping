@@ -11,22 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :posts %>
-    <%= form.text_field :posts, id: :post_posts %>
+  <div class="form-group">
+    <%= form.label :posts, value: 'Должность' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.text_field :posts, id: :post_posts, class: 'form-control' %>
+      </div>  
+    </div> 
   </div>
 
-  <div class="field">
-    <%= form.label :method_paymentID %>
-    <%= form.number_field :method_paymentID, id: :post_method_paymentID %>
+  <div class="form-group">
+    <%= form.label :method_paymentID, value: 'Способ оплаты ID' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.number_field :method_paymentID, id: :post_method_paymentID, class: 'form-control' %>
+      </div>  
+    </div>    
   </div>
 
-  <div class="field">
-    <%= form.label :zp %>
-    <%= form.text_field :zp, id: :post_zp %>
+  <div class="form-group">
+    <%= form.label :zp, value: 'Зарплата' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.text_field :zp, id: :post_zp, class: 'form-control' %>
+      </div>  
+    </div>     
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: 'btn btn-dark', value: 'Сохранить' %>
+    <%= link_to 'Назад', posts_path, class: 'btn btn-outline-dark' %>
   </div>
 <% end %>

@@ -11,22 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :staff_date %>
-    <%= form.text_field :staff_date, id: :contract_staff_date %>
+  <div class="form-group">
+    <%= form.label :staff_date, value: 'Начало' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.text_field :start_date, id: :contract_staff_date, class: 'form-control' %>
+      </div>
+    </div>    
   </div>
 
-  <div class="field">
-    <%= form.label :expiration_date %>
-    <%= form.text_field :expiration_date, id: :contract_expiration_date %>
+  <div class="form-group">
+    <%= form.label :expiration_date, value: 'Конец' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.text_field :expiration_date, id: :contract_expiration_date, class: 'form-control' %>
+      </div>
+    </div>    
   </div>
 
-  <div class="field">
-    <%= form.label :staffID %>
-    <%= form.number_field :staffID, id: :contract_staffID %>
+  <div class="form-group">
+    <%= form.label :staffID, value: 'Сотрудник id' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.number_field :staffID, id: :contract_staffID, class: 'form-control' %>
+      </div>
+    </div>    
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: 'btn btn-dark', value: 'Сохранить' %>
+    <%= link_to 'Назад', contracts_path, class: 'btn btn-outline-dark' %>
   </div>
 <% end %>

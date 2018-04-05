@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Staff date:</strong>
-  <%= @contract.staff_date %>
+  <strong>Начало:</strong>
+  <%= @contract.start_date %>
 </p>
 
 <p>
-  <strong>Expiration date:</strong>
+  <strong>Конец:</strong>
   <%= @contract.expiration_date %>
 </p>
 
 <p>
-  <strong>Staffid:</strong>
+  <strong>Сотрудник id:</strong>
   <%= @contract.staffID %>
 </p>
 
-<%= link_to 'Edit', edit_contract_path(@contract) %> |
-<%= link_to 'Back', contracts_path %>
+<%= link_to 'Редактировать', edit_contract_path(@contract), class: 'btn btn-dark' %> 
+<%= link_to 'Назад', contracts_path, class: 'btn btn-outline-dark' %>

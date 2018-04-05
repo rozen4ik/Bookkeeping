@@ -1,13 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Operating Schedules</h1>
+<h1>График работы</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Monthid</th>
-      <th>Col days</th>
-      <th>Staffid</th>
+      <th>#</th>
+      <th>Месяц id</th>
+      <th>Количество дней</th>
+      <th>Сотрудник id</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,12 +16,13 @@
   <tbody>
     <% @operating_schedules.each do |operating_schedule| %>
       <tr>
+        <td><%= operating_schedule.id %></td>
         <td><%= operating_schedule.monthID %></td>
         <td><%= operating_schedule.col_days %></td>
         <td><%= operating_schedule.staffID %></td>
-        <td><%= link_to 'Show', operating_schedule %></td>
-        <td><%= link_to 'Edit', edit_operating_schedule_path(operating_schedule) %></td>
-        <td><%= link_to 'Destroy', operating_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Открыть', operating_schedule %></td>
+        <td><%= link_to 'Редактировать', edit_operating_schedule_path(operating_schedule) %></td>
+        <td><%= link_to 'Удалить', operating_schedule, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Operating Schedule', new_operating_schedule_path %>
+<%= link_to 'Добавить', new_operating_schedule_path, class: 'btn btn-dark' %>

@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Method:</strong>
+  <strong>Метод:</strong>
   <%= @method_payment.method %>
 </p>
 
-<%= link_to 'Edit', edit_method_payment_path(@method_payment) %> |
-<%= link_to 'Back', method_payments_path %>
+<%= link_to 'Редактировать', edit_method_payment_path(@method_payment), class: 'btn btn-dark' %> 
+<%= link_to 'Назад', method_payments_path, class: 'btn btn-outline-dark' %>

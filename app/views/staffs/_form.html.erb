@@ -11,27 +11,44 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, id: :staff_first_name %>
+  <div class="form-group">
+    <%= form.label :first_name, value: 'Имя' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.text_field :first_name, id: :staff_first_name, class: 'form-control' %>
+      </div>
+    </div>    
   </div>
 
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, id: :staff_last_name %>
+  <div class="form-group">
+    <%= form.label :last_name, value: 'Фамилия' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.text_field :last_name, id: :staff_last_name, class: 'form-control' %>
+      </div>
+    </div> 
   </div>
 
-  <div class="field">
-    <%= form.label :postID %>
-    <%= form.number_field :postID, id: :staff_postID %>
+  <div class="form-group">
+    <%= form.label :postID, value: 'Должность ID' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.number_field :postID, id: :staff_postID, class: 'form-control' %>
+      </div>
+    </div> 
   </div>
 
-  <div class="field">
-    <%= form.label :personal_dataID %>
-    <%= form.number_field :personal_dataID, id: :staff_personal_dataID %>
+  <div class="form-group">
+    <%= form.label :personal_dataID, value: 'Персональная информация id' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.number_field :personal_dataID, id: :staff_personal_dataID, class: 'form-control' %>
+      </div>
+    </div> 
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: 'btn btn-dark', value: 'Сохранить' %>
+    <%= link_to 'Назад', staffs_path, class: 'btn btn-outline-dark' %>
   </div>
 <% end %>

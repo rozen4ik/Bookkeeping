@@ -11,22 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :monthID %>
-    <%= form.number_field :monthID, id: :operating_schedule_monthID %>
+  <div class="form-group">
+    <%= form.label :monthID, value: 'Месяц id' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.number_field :monthID, id: :operating_schedule_monthID, class: 'form-control' %>
+      </div>
+    </div>    
   </div>
 
-  <div class="field">
-    <%= form.label :col_days %>
-    <%= form.number_field :col_days, id: :operating_schedule_col_days %>
+  <div class="form-group">
+    <%= form.label :col_days, value: 'Количество дней' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.number_field :col_days, id: :operating_schedule_col_days, class: 'form-control' %>
+      </div>
+    </div>    
   </div>
 
-  <div class="field">
-    <%= form.label :staffID %>
-    <%= form.number_field :staffID, id: :operating_schedule_staffID %>
+  <div class="form-group">
+    <%= form.label :staffID, value: 'Сотрудник id' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.number_field :staffID, id: :operating_schedule_staffID, class: 'form-control' %>
+      </div>
+    </div>    
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: 'btn btn-dark', value: 'Сохранить' %>
+    <%= link_to 'Назад', operating_schedules_path, class: 'btn btn-outline-dark' %>
   </div>
 <% end %>

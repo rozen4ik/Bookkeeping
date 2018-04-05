@@ -1,11 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Method Payments</h1>
+<h1>Метод оплаты</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Method</th>
+      <th>#</th>
+      <th>Метод</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,10 +14,11 @@
   <tbody>
     <% @method_payments.each do |method_payment| %>
       <tr>
+        <td><%= method_payment.id %></td>
         <td><%= method_payment.method %></td>
-        <td><%= link_to 'Show', method_payment %></td>
-        <td><%= link_to 'Edit', edit_method_payment_path(method_payment) %></td>
-        <td><%= link_to 'Destroy', method_payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Открыть', method_payment %></td>
+        <td><%= link_to 'Редактировать', edit_method_payment_path(method_payment) %></td>
+        <td><%= link_to 'Удалить', method_payment, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Method Payment', new_method_payment_path %>
+<%= link_to 'Добавить', new_method_payment_path, class: 'btn btn-dark' %>

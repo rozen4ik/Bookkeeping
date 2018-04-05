@@ -11,22 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :gender %>
-    <%= form.text_field :gender, id: :personal_datum_gender %>
+  <div class="form-group">
+    <%= form.label :gender, value: 'Пол' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.text_field :gender, id: :personal_datum_gender, class: 'form-control' %>
+      </div>
+    </div>    
   </div>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.number_field :phone, id: :personal_datum_phone %>
+  <div class="form-group">
+    <%= form.label :phone, value: 'Телефон' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.number_field :phone, id: :personal_datum_phone, class: 'form-control' %>
+      </div>
+    </div>    
   </div>
 
-  <div class="field">
-    <%= form.label :marital_statusID %>
-    <%= form.number_field :marital_statusID, id: :personal_datum_marital_statusID %>
+  <div class="form-group">
+    <%= form.label :marital_statusID, value: 'Семейное положение id' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.number_field :marital_statusID, id: :personal_datum_marital_statusID, class: 'form-control' %>
+      </div>
+    </div>    
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: 'btn btn-dark', value: 'Сохранить'%>
+    <%= link_to 'Назад', personal_data_path, class: 'btn btn-outline-dark' %>
   </div>
 <% end %>

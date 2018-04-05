@@ -1,13 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1>Должность</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Posts</th>
-      <th>Method paymentid</th>
-      <th>Zp</th>
+      <th>#</th>
+      <th>Должность</th>
+      <th>Способ оплаты id</th>
+      <th>Зарплата</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,12 +16,13 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
+        <td><%= post.id %></td>
         <td><%= post.posts %></td>
         <td><%= post.method_paymentID %></td>
         <td><%= post.zp %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Открыть', post %></td>
+        <td><%= link_to 'Редактировать', edit_post_path(post) %></td>
+        <td><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'Добавить', new_post_path, class: 'btn btn-dark' %>

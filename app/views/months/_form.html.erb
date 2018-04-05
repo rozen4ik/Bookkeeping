@@ -11,12 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :month_name %>
-    <%= form.text_field :month_name, id: :month_month_name %>
+  <div class="form-group">
+    <%= form.label :month_name, value: 'Название месяца' %>
+    <div class="row">
+      <div class="col-2">
+        <%= form.text_field :month_name, id: :month_month_name, class: 'form-control' %>
+      </div>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: 'btn btn-dark', value: 'Сохранить' %>
+    <%= link_to 'Назад', months_path, class: 'btn btn-outline-dark' %>
   </div>
 <% end %>

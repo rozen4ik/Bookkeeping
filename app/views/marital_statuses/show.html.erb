@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Status:</strong>
+  <strong>Статус:</strong>
   <%= @marital_status.status %>
 </p>
 
-<%= link_to 'Edit', edit_marital_status_path(@marital_status) %> |
-<%= link_to 'Back', marital_statuses_path %>
+<%= link_to 'Редактировать', edit_marital_status_path(@marital_status), class: 'btn btn-dark' %> 
+<%= link_to 'Назад', marital_statuses_path, class: 'btn btn-outline-dark' %>

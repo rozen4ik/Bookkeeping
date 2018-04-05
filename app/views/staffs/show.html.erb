@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>First name:</strong>
+  <strong>Имя:</strong>
   <%= @staff.first_name %>
 </p>
 
 <p>
-  <strong>Last name:</strong>
+  <strong>Фамилия:</strong>
   <%= @staff.last_name %>
 </p>
 
 <p>
-  <strong>Postid:</strong>
+  <strong>Должность id:</strong>
   <%= @staff.postID %>
 </p>
 
 <p>
-  <strong>Personal dataid:</strong>
+  <strong>Персональная информация id:</strong>
   <%= @staff.personal_dataID %>
 </p>
 
-<%= link_to 'Edit', edit_staff_path(@staff) %> |
-<%= link_to 'Back', staffs_path %>
+<%= link_to 'Редактирова', edit_staff_path(@staff), class: 'btn btn-dark' %> 
+<%= link_to 'Назад', staffs_path, class: 'btn btn-outline-dark' %>

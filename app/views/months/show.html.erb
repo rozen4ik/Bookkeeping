@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Month name:</strong>
+  <strong>Название месяца:</strong>
   <%= @month.month_name %>
 </p>
 
-<%= link_to 'Edit', edit_month_path(@month) %> |
-<%= link_to 'Back', months_path %>
+<%= link_to 'Редактировать', edit_month_path(@month), class: 'btn btn-dark' %> 
+<%= link_to 'Назад', months_path, class: 'btn btn-outline-dark' %>
